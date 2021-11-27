@@ -1,0 +1,600 @@
+<!-- Y8 Summative Project by Jason Li --> 
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jason 李 Family</title>
+  <style type="text/css">
+
+    *, *:before, *:after{
+      background-color: #2c2f33;
+      font-family: "gill sans", sans-serif;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    } 
+    .center {
+      text-align: center;
+    }
+    .border {
+      border: 4px solid #23272a;
+    }
+    .button{
+      background-color: #23272a;
+      color: #99aab5;
+      font-size: 1.25rem;
+      padding: 1.25rem 5rem;
+      border: 1px solid #99aab5;
+      transition-duration: .5s;
+      width: 20%;
+    }
+    .button:hover {
+      background-color: #99aab5;
+      color: #23272a;
+      border: 1px solid #23272a;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+    .info__button{
+      background-color: #23272a;
+      color: #99aab5;
+      padding: 0.7rem 2.8rem;
+      border-radius: 1rem;
+      border: 1px solid #99aab5;
+      transition-duration: .4s;
+      width: 33%;
+    }
+    .info__button:hover{
+      background-color: #99aab5;
+      color: #23272a;
+      border: 1px solid #23272a;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+    .family-list{
+      display: flex;
+      justify-content: space-between;
+    }
+    .family-header{
+      color: #7289da;
+      background-color: #23272a;
+      padding: 1.25rem;
+    }
+    #name{
+      text-decoration: underline;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      margin-right: 0;
+      margin-left: 0;
+    }
+    .info__text{
+      margin: 2rem 2rem;
+      max-width: 60%;
+      word-wrap: break-word;
+    }
+    .home__button{
+      margin-top: .3rem;
+      margin-left: .3rem;
+      margin-bottom: 0rem;
+      padding: .3rem .7rem;
+      border: 1px solid #ffffff;
+      transition-duration: .4s;
+    }
+    .home__button:hover{
+      background-color: #ffffff;
+      color: #2c2f33;
+      border: 1px solid #2c2f33;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+    .image__center{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .underline{
+      text-decoration: underline ;
+    }
+
+  </style>
+  </head>
+  <body>
+
+    <h1 class="center ; family-header">李 Family Names</h1>
+
+    <div class="family-list">
+      <button id="button1" class="button">Jason</button>      
+      <button id="button2" class="button">Cara</button>
+      <button id="button3" class="button">Ethan</button>
+      <button id="button4" class="button">Ivan</button>
+      <button id="button5" class="button">Josephine</button>
+    </div>
+
+    <h1 class="border"></h1>
+
+    <button id="homebutton" class="home__button" style="visibility: hidden;">← Back To Home</button>
+
+    <h2 id="name" class="center" style="margin-top: 0px;">About This Website</h2>
+
+    <button id="origin" class="info__button" style="visibility: hidden;">Origin</button>
+    <button id="meaning" class="info__button" style="visibility: hidden;">Meaning</button>
+    <button id="why" class="info__button" style="visibility: hidden;">Why this name?</button>
+
+    <p id="information" class="info__text" style="text-align: center; margin-left: 287px; margin-top: 0px; margin-bottom: 32px;">This website was founded on the grounds of UCC. It has been a work in progress and will be complete on Friday, November 26, 2021. Although the website will no longer be improved past this date, I hope that the idea of informing people about the meanings and origins of their names will continue on beyond my family. The purpose of making this website was to display the origins and meanings of my family’s names and to inform people about what our names say about us. Although names are usually not something we choose, it usually has an intended meaning and use. Names are used to address and identify people, this is the belief in which this website was founded on.</p>
+
+    <h5 id="list" class="info__text ; underline" style="margin-bottom: .5rem;"></h5>
+
+    <p id="notable" class="info__text" style="margin-top: 0;"></p>
+
+    <img src="uccphoto.jpeg" id="img1" style="border: 5px solid #ffffff; width: 530px;height: 300px;" class="image__center">
+
+    <p class="center" style="margin-top: 8px;" id="imagelabel">Upper Canada College</p>
+
+
+  <script type="text/javascript">
+
+    document.getElementById("button1").onclick = function() {
+
+      {document.getElementById("homebutton").style.visibility="visible"}
+
+      {document.getElementById("information").style.visibility="hidden"}
+
+      {document.getElementById("origin").style.visibility="visible"}
+
+      {document.getElementById("meaning").style.visibility="visible"}
+
+      {document.getElementById("why").style.visibility="visible"}
+
+      {document.getElementById("information").style.textAlign="left"}
+
+      {document.getElementById("origin").style.transitionDuration=".4s"}
+
+      {document.getElementById("meaning").style.transitionDuration=".4s"}
+
+      {document.getElementById("why").style.transitionDuration=".4s"}
+      
+      {document.getElementById("homebutton").style.transitionDuration=".4s"}
+
+      {document.getElementById("information").style.margin="32px"}
+
+      {document.getElementById("img1").style.visibility="hidden"}
+
+      {document.getElementById("imagelabel").style.visibility="hidden"}
+
+      const text = document.getElementById("list");
+      text.innerHTML = ""
+
+      const content = document.getElementById("notable");
+      content.innerHTML = ""
+
+      const info = document.getElementById("name");
+      info.innerHTML = "Jason"
+
+      const element = document.getElementById("information");
+      element.innerHTML = ""
+
+      document.getElementById("origin").onclick = function() {
+
+        {document.getElementById("information").style.visibility="visible"}
+
+        const text = document.getElementById("list");
+        text.innerHTML = ""
+
+        const content = document.getElementById("notable");
+        content.innerHTML = ""
+
+        const info = document.getElementById("information");
+        info.innerHTML = "The name was borne in Greek mythology by Jason, the great Thessalian hero who led the Argonauts in the quest for the Golden Fleece. The name is also found in the New Testament, as the house of a man named Jason was used as a refuge by Paul and Silas. Its adoption in the United Kingdom peaked during the 1970s, when it was among the top 20 male names, but it had fallen out of the top 100 by 2003. Jason is the most common spelling; however, there are many variant spellings such as Jaeson, Jaison, Jayson, and Jacyn. Jay and Jace are the common diminutives. A feminine name that sounds similar is Jacin, derived from the Portuguese-Spanish name Jacinta or the Anglicized version Jacinda, meaning Hyacinth."
+      }
+
+      document.getElementById("meaning").onclick = function() {
+
+        {document.getElementById("information").style.visibility="visible"}
+        
+        const info = document.getElementById("information");
+        info.innerHTML = "Jason is a common masculine given name. It comes from Greek Ἰάσων (Iásōn), meaning healer, from the verb ἰάομαι (iáomai), heal, cure, cognate with Ἰασώ (Iasṓ), the goddess of healing, and ἰατρός (iatrós), healer, physician."
+
+        const element = document.getElementById("list");
+        element.innerHTML = "Historical People Named Jason"
+
+        const content = document.getElementById("notable");
+        content.innerHTML = "Jason: mythological leader of the Argonauts, Jason (high priest) (2nd century BCE): High Priest of Jerusalem, Jason the Martyr (3rd century): saint and martyr, Jason of Cyrene (circa 100 BCE): Jewish historian, Jason of Nysa (circa 100 BCE): Stoic philosopher, Jason of Pherae (died 370 BCE): King of Thessaly, Jason of Tarsus: saint numbered among the 72 Apostles, Jason of Tralles (1st century BCE): tragic actor singing the Bacchae of Euripides when the head of Crassus was brought to the king Orodes II"
+      }
+
+      document.getElementById("why").onclick = function() {
+
+        {document.getElementById("information").style.visibility="visible"}
+
+        const text = document.getElementById("list");
+        text.innerHTML = ""
+
+       const content = document.getElementById("notable");
+       content.innerHTML = ""
+
+        const info = document.getElementById("information");
+        info.innerHTML = "My mother had a name that started with J and she wanted her son to be named after her. She decided on Jason because it sounded like J-Son. She also looked at the meaning and loved that it meant “healer”."
+      }
+
+    }  
+
+    document.getElementById("button2").onclick = function() {
+
+      {document.getElementById("homebutton").style.visibility="visible"}
+
+      {document.getElementById("information").style.visibility="hidden"}
+      
+      {document.getElementById("origin").style.visibility="visible"}
+
+      {document.getElementById("meaning").style.visibility="visible"}
+      
+      {document.getElementById("why").style.visibility="visible"}
+
+      {document.getElementById("information").style.textAlign="left"}
+
+      {document.getElementById("origin").style.transitionDuration=".4s"}
+
+      {document.getElementById("meaning").style.transitionDuration=".4s"}
+
+      {document.getElementById("why").style.transitionDuration=".4s"}
+      
+      {document.getElementById("homebutton").style.transitionDuration=".4s"}
+
+      {document.getElementById("information").style.margin="32px"}
+
+      {document.getElementById("img1").style.visibility="hidden"}
+
+      {document.getElementById("imagelabel").style.visibility="hidden"}
+
+      const text = document.getElementById("list");
+      text.innerHTML = ""
+
+      const content = document.getElementById("notable");
+      content.innerHTML = ""
+
+      const info = document.getElementById("name")
+      info.innerHTML = "Cara";
+
+      const element = document.getElementById("information");
+      element.innerHTML = ""
+
+      document.getElementById("origin").onclick = function() {
+
+        {document.getElementById("information").style.visibility="visible"}
+
+        const text = document.getElementById("list");
+        text.innerHTML = ""
+
+       const content = document.getElementById("notable");
+       content.innerHTML = ""
+
+        const info = document.getElementById("information");
+        info.innerHTML = "Cara is a female given name of Latin, Greek, or Celtic origin. It has been frequently used mostly in recent times, especially in the 1970s, 1980s and 1990s. and can also be used as a short form for the name Caralee. In Egyptian language, the term Kara can be translated as the spirit of Ra. In Japan, the word Kara means empty, and is the basis of the name of the Karate martial art."
+      }
+
+      document.getElementById("meaning").onclick = function() {
+
+        {document.getElementById("information").style.visibility="visible"}
+        
+        const info = document.getElementById("information");
+        info.innerHTML = "Cara is an Irish feminine given name meaning friend. It is also an English, German and Italian language feminine given name from the Latin cārus meaning “darling, beloved, dear, loved one”. It is also a Danish, Norwegian and Swedish feminine given name that is an alternate form of Kara as well as a short form of Carola, Carolina and Oscara. Cara means beloved in Latin and the names Carina, Cherie and Cheryl derive from it. Cara also means friend in Irish language. Kara, the alternative spelling, is from the Cornish word kara, meaning love. This is likely cognate to the popular Welsh girls' name Carys. The name is also that of an island in the Inner Hebrides island group, Scotland; Cara Island lying just off the southern tip of the Isle of Gigha. In Turkey, the word Kara means dark, which may or may not be related to the Gaelic Ciara of the same meaning. In Greece, the name Kara means pure, and is related to the names Katharina, Katherine, and Katrina. In Ancient (and sometimes in modern) Greek language, Kara means Head."
+
+        const text = document.getElementById("list");
+        text.innerHTML = "Historical People Named Cara"
+
+        const content = document.getElementById("notable");
+        content.innerHTML = "Cara Judea Alhadeff: artist, writer and yoga teacher, Cara Black: professional tennis player, Cara Black (author): American mystery writer, Cara Blue Adams: American author, Cara Buono: American actress, Cara Butler: Irish American stepdancer and choreographer, Cara Capuano: sports anchor for ESPNU, Cara Carriveau (born 1966): Chicago radio personality, Cara Delevingne (born 1992): fashion model and actress, Cara DeLizia (born 1984): American television actress, Cara Dillon: Irish folk singer, Cara Duff-MacCormick: Canadian actress, Cara Dunne-Yates (1970–2004): American scholar-athlete, Cara Gee (b. 1982) Ojibwe: Canadian actress, Cara Gorges (born 1987): beauty queen from Clearwater, Kansas, Cara Heads (born 1977): American Olympic weightlifter, Cara Hilton: Scottish Labour Party politician and Member of the Scottish Parliament, Cara Hoffman: New York City-based novelist and journalist, Cara Horgan: English actress, Cara Jones: singer, songwriter, and a voice actor."
+      }
+
+      document.getElementById("why").onclick = function() {
+
+        {document.getElementById("information").style.visibility="visible"}
+
+        const text = document.getElementById("list");
+        text.innerHTML = ""
+
+       const content = document.getElementById("notable");
+       content.innerHTML = ""
+
+        const info = document.getElementById("information");
+        info.innerHTML = "My parents had two names that they wanted to name Cara with, Alison or Cara. When Cara was born, they asked the nurses if she looked like Cara or Alison and the nurse decided on Cara, thus giving Cara her name."
+      }
+    
+    }
+
+    document.getElementById("button3").onclick = function() {
+
+      {document.getElementById("homebutton").style.visibility="visible"}
+
+      {document.getElementById("information").style.visibility="hidden"}
+
+      {document.getElementById("origin").style.visibility="visible"}
+
+      {document.getElementById("meaning").style.visibility="visible"}
+      
+      {document.getElementById("why").style.visibility="visible"}
+
+      {document.getElementById("information").style.textAlign="left"}
+
+      {document.getElementById("origin").style.transitionDuration=".4s"}
+
+      {document.getElementById("meaning").style.transitionDuration=".4s"}
+
+      {document.getElementById("why").style.transitionDuration=".4s"}
+      
+      {document.getElementById("homebutton").style.transitionDuration=".4s"}
+
+      {document.getElementById("information").style.margin="32px"}
+
+      {document.getElementById("img1").style.visibility="hidden"}
+
+      {document.getElementById("imagelabel").style.visibility="hidden"}
+
+      const text = document.getElementById("list");
+      text.innerHTML = ""
+
+      const content = document.getElementById("notable");
+      content.innerHTML = ""
+
+      const info = document.getElementById("name");
+      info.innerHTML = "Ethan"
+
+      const element = document.getElementById("information");
+      element.innerHTML = ""
+
+      document.getElementById("origin").onclick = function() {
+
+        {document.getElementById("information").style.visibility="visible"}
+
+        const text = document.getElementById("list");
+        text.innerHTML = ""
+
+       const content = document.getElementById("notable");
+       content.innerHTML = ""
+
+        const info = document.getElementById("information");
+        info.innerHTML = "Ethan is a male given name of Hebrew origin. The name Ethan appears eight times in the Hebrew Bible (1 Kings. 4:31, Ps. 89 title, 1 Chr. 2:6 and 2:8, 1 Chr. 6:42 and 6:44, and 1 Chr. 15:17 and 15:19). It comes from the Hebrew name Eitan. Ethan, the Ezrahite from the Bible is viewed as being wise and strong."
+      }
+
+      document.getElementById("meaning").onclick = function() {
+
+        {document.getElementById("information").style.visibility="visible"}
+        
+        const text = document.getElementById("list");
+        text.innerHTML = "Historical People Named Ethan"
+
+        const content = document.getElementById("notable");
+        content.innerHTML = "Ethan Albright (born 1971): American football player, Ethan Allen (disambiguation): multiple people, Ethan Ampadu (born 2000): British footballer, Ethan Allen Andrews (disambiguation): multiple people, Ethan Anthony (born 1950): American architect, Ethan Ash: English singer-songwriter, Eytan Avriel (born 1960): Israeli journalist, Ethan Bamber (born 1998): English cricketer, Ethan Bear (born 1997): Canadian ice hockey player, Ethen Beavers: American comic book artist, Ethan Becker: American knife maker, Ethan F. Becker: American speech coach, Ethan Beckford (born 1999): English footballer, Eytan Ben-David (born 1963): Israeli security expert, Ethan Berkowitz (born 1962): American politician, Ethan T. Berlin: American comedian and musician, Ethan Blackaby (born 1940): American baseball player, Ethan Blackadder (born 1995): New Zealand rugby union footballer, Ethan Bortnick (born 2000): American pianist, Ethan Brierley (born 2003): English footballer, Ethan Bristow (born 2001): English footballer, Ethan Britto (born 2000): Gibraltarian footballer, Ethan Bronner (born 1954): American editor, Ethan Brookes (born 2001): English cricketer, Ethan Brooks (born 1972): American football player, Ethan Brosh: Israeli-American guitarist, Ethan Brown (disambiguation): multiple people"
+
+        const info = document.getElementById("information");
+        info.innerHTML = "Ethan means firm, enduring, strong and long-lived. It may also be spelled or pronounced as Etan, Eitan or Eytan. It's a name with enduring strength and popularity, appearing everywhere from the Mission: Impossible movies to the well-known furniture chain Ethan Allen."
+      }
+
+      document.getElementById("why").onclick = function() {
+
+        {document.getElementById("information").style.visibility="visible"}
+
+        const text = document.getElementById("list");
+        text.innerHTML = ""
+
+       const content = document.getElementById("notable");
+       content.innerHTML = ""
+
+        const info = document.getElementById("information");
+        info.innerHTML = "When my mother was pregnant with Ethan, she was sick and my parents did not think that he would survive. However, he was strong enough to survive and when he was born he was named Ethan because it meant strong and wise."
+      }
+      
+    }
+
+    document.getElementById("button4").onclick = function() {
+
+      {document.getElementById("homebutton").style.visibility="visible"}
+
+      {document.getElementById("information").style.visibility="hidden"}
+
+      {document.getElementById("origin").style.visibility="visible"}
+
+      {document.getElementById("meaning").style.visibility="visible"}
+      
+      {document.getElementById("why").style.visibility="visible"}
+
+      {document.getElementById("information").style.textAlign="left"}
+
+      {document.getElementById("origin").style.transitionDuration=".4s"}
+
+      {document.getElementById("meaning").style.transitionDuration=".4s"}
+
+      {document.getElementById("why").style.transitionDuration=".4s"}
+      
+      {document.getElementById("homebutton").style.transitionDuration=".4s"}
+
+      {document.getElementById("information").style.margin="32px"}
+
+      {document.getElementById("img1").style.visibility="hidden"}
+
+      {document.getElementById("imagelabel").style.visibility="hidden"}
+
+      const text = document.getElementById("list");
+      text.innerHTML = ""
+
+      const content = document.getElementById("notable");
+      content.innerHTML = ""
+
+      const info = document.getElementById("name");
+      info.innerHTML = "Ivan"
+
+      const element = document.getElementById("information");
+      element.innerHTML = ""
+
+      document.getElementById("origin").onclick = function() {
+
+        {document.getElementById("information").style.visibility="visible"}
+
+        const text = document.getElementById("list");
+        text.innerHTML = ""
+
+       const content = document.getElementById("notable");
+       content.innerHTML = ""
+
+        const info = document.getElementById("information");
+        info.innerHTML = "Ivan (Cyrillic: Иван or Іван) is a Slavic male given name, connected with the variant of the Greek name Iōánnēs (English: John) from Hebrew יוֹחָנָן Yôḥānnān meaning 'God is gracious'. It is worldwide associated with Slavic countries. It is very popular in Russia, Ukraine, Croatia, Serbia, Slovenia, Bulgaria, Belarus, North Macedonia, and Montenegro and has also become more popular in Romance-speaking countries since the 20th century. Ivan is the common Slavic Latin spelling, while Cyrillic spelling is two-fold: in Bulgarian, Russian, Macedonian, Serbian and Montenegrin it is Иван, while in Belarusian and Ukrainian it is Іван. The Old Church Slavonic (or Old Cyrillic) spelling is Їωан. It is the Slavic relative of the Latin name Johannes, corresponding to English John. This Slavic version of the name originates from New Testament Greek Ἰωάννης (Iōánnēs) rather than from the Latin Io(h)annes."
+      }
+
+      document.getElementById("meaning").onclick = function() {
+
+        {document.getElementById("information").style.visibility="visible"}
+
+        const info = document.getElementById("information");
+        info.innerHTML = "The Greek name is in turn derived from Hebrew יוֹחָנָן (Yôḥānān), meaning YHWH (God) is gracious. The name is ultimately derived from the Biblical Hebrew name יוחנן (pronounced [joχanan]), short for יהוחנן (pronounced [jehoχanan]), meaning God was merciful."
+
+        const text = document.getElementById("list");
+        text.innerHTML = "Historical People Named Ivan"
+
+        const content = document.getElementById("notable");
+        content.innerHTML = "Ivan Vladislav: Bulgarian emperor (1015–1018), Ivan Asen I: Bulgarian emperor (1189–1196), Ivan II or Kaloyan: Bulgarian emperor (1197–1207), Ivan Asen II: Bulgarian emperor (1218–1241), Ivan Stephen: Bulgarian emperor (1330–1331), Ivan Alexander: Bulgarian emperor (1331–1371), Ivan Shishman: Bulgarian emperor in Tarnovo (1371–1395), Ivan Stratsimir: Bulgarian emperor in Vidin (1356–1396), Ivan I The Moneybag: Grand Duke of Moscow (1325–1340), Ivan II The Fair: Grand Duke of Moscow (1353–1359), Ivan III The Great: Grand Prince of Moscow (1462–1505), Ivan IV The Terrible: Russian emperor (1547–1584), Ivan V: Russian emperor (1682–1696), Ivan VI: Russian emperor (1740–1741)"
+      }
+
+      document.getElementById("why").onclick = function() {
+
+        {document.getElementById("information").style.visibility="visible"}
+
+        const text = document.getElementById("list");
+        text.innerHTML = ""
+
+       const content = document.getElementById("notable");
+       content.innerHTML = ""
+
+        const info = document.getElementById("information");
+        info.innerHTML = "Ivan means special and my grandmother had very low chances of getting pregnant with Ivan, but she did and Ivan was born. "
+      }
+      
+    }
+
+    document.getElementById("button5").onclick = function() {
+
+      {document.getElementById("homebutton").style.visibility="visible"}
+
+      {document.getElementById("information").style.visibility="hidden"}
+
+      {document.getElementById("origin").style.visibility="visible"}
+
+      {document.getElementById("meaning").style.visibility="visible"}
+      
+      {document.getElementById("why").style.visibility="visible"}
+
+      {document.getElementById("information").style.textAlign="left"}
+
+      {document.getElementById("origin").style.transitionDuration=".4s"}
+
+      {document.getElementById("meaning").style.transitionDuration=".4s"}
+
+      {document.getElementById("why").style.transitionDuration=".4s"}
+      
+      {document.getElementById("homebutton").style.transitionDuration=".4s"}
+
+      {document.getElementById("information").style.margin="32px"}
+
+      {document.getElementById("img1").style.visibility="hidden"}
+
+      {document.getElementById("imagelabel").style.visibility="hidden"}
+
+      const text = document.getElementById("list");
+      text.innerHTML = ""
+
+      const content = document.getElementById("notable");
+      content.innerHTML = ""
+
+      const info = document.getElementById("name");
+      info.innerHTML = "Josephine"
+
+      const element = document.getElementById("information");
+      element.innerHTML = ""
+
+      document.getElementById("origin").onclick = function() {
+
+        {document.getElementById("information").style.visibility="visible"}
+
+        const text = document.getElementById("list");
+        text.innerHTML = ""
+
+       const content = document.getElementById("notable");
+       content.innerHTML = ""
+
+        const info = document.getElementById("information");
+        info.innerHTML = "Josephine is the feminine form of Joseph, a name ultimately derived from the Hebrew Yosef, meaning Jehovah increases. In French it has an accent over the first E, which was omitted in the English, German, and Dutch translations of the name. Empress Joséphine du Beauharnais was born Marie-Josephe-Rose, but called Josephine by her husband, Napolean Bonaparte."
+      }
+
+      document.getElementById("meaning").onclick = function() {
+
+        {document.getElementById("information").style.visibility="visible"}
+
+        const info = document.getElementById("information");
+        info.innerHTML = "Josephine means God will increase or shall grow. It is the male version of the name Joseph."
+
+        const text = document.getElementById("list");
+        text.innerHTML = "Historical People Named Josephine"
+
+        const content = document.getElementById("notable");
+        content.innerHTML = "Joséphine-Charlotte of Belgium Princess of Belgium: Grand Duchess of Luxembourg, Josephine of Leuchtenberg: Queen of Sweden, Joséphine de Beauharnais: Empress Consort of the French and first wife of Napoleon Bonaparte, Princess Joséphine of Lorraine: Princess of Carignano, Josephine of Rosenborg: Countess and member of Denmark's Royal Family, Princess Josephine of Baden: Princess of Hohenzollern-Sigmaringen, Princess Joséphine Caroline of Belgium: wife of Prince Karl Anton of Hohenzollern, Princess Josephine of Denmark: Danish princess"
+      }
+
+      document.getElementById("why").onclick = function() {
+
+        {document.getElementById("information").style.visibility="visible"}
+
+        const text = document.getElementById("list");
+        text.innerHTML = ""
+
+       const content = document.getElementById("notable");
+       content.innerHTML = ""
+
+        const info = document.getElementById("information");
+        info.innerHTML = "My mother named herself this because she liked that it was a french name. After reading that it meant shall grow. She decided to name herself Josephine"
+      }
+
+    }
+
+
+
+    document.getElementById("homebutton").onclick = function() {
+
+      const info = document.getElementById("name");
+      info.innerHTML = "About This Website"
+
+      const text = document.getElementById("list");
+      text.innerHTML = ""
+
+      const content = document.getElementById("notable");
+      content.innerHTML = ""
+
+      {document.getElementById("origin").style.transitionDuration=".0s"}
+
+      {document.getElementById("meaning").style.transitionDuration=".0s"}
+
+      {document.getElementById("why").style.transitionDuration=".0s"}
+
+      {document.getElementById("homebutton").style.transitionDuration=".0s"}
+
+      {document.getElementById("origin").style.visibility="hidden"}
+
+      {document.getElementById("information").style.visibility="visible"}
+
+      {document.getElementById("meaning").style.visibility="hidden"}
+
+      {document.getElementById("why").style.visibility="hidden"}
+
+      {document.getElementById("homebutton").style.visibility="hidden"}
+
+      {document.getElementById("information").style.textAlign="center"}
+
+      {document.getElementById("information").style.marginLeft="287px"}
+
+      {document.getElementById("information").style.marginTop="0px"}
+
+      {document.getElementById("img1").style.visibility="visible"}
+
+      {document.getElementById("imagelabel").style.visibility="visible"}
+
+      const element = document.getElementById("information");
+      element.innerHTML = "This website was founded on the grounds of UCC. It has been a work in progress and will be complete on Friday, November 26, 2021. Although the website will no longer be improved past this date, I hope that the idea of informing people about the meanings and origins of their names will continue on beyond my family. The purpose of making this website was to display the origins and meanings of my family’s names and to inform people about what our names say about us.  Although names are usually not something we choose, it usually has an intended meaning and use. Names are used to address and identify people, this is the belief in which this website was founded on."
+
+    }
+  </script>
+  </body>
+  </html>
